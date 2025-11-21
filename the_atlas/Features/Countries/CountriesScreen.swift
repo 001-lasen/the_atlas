@@ -32,6 +32,7 @@ struct CountriesScreen: View {
                 List(filteredCountries) { country in
                     NavigationLink(destination: CitiesScreen(country: country)) {
                         VStack {
+                            FlagImageView(urlPath: country.flag)
                             Text(country.name)
                                 .font(.headline)
                                 .foregroundColor(.primary)
